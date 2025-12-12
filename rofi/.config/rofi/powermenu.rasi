@@ -1,0 +1,42 @@
+@import "colors.rasi"
+
+* {
+    font: "Material Symbols Rounded 36";
+    background-color: transparent;
+    text-color: @foreground;
+    spacing: 0;
+}
+
+window {
+    width: 360px;
+    border-radius: 24px;
+    padding: 0.2em;
+    background-color: @background;
+}
+
+mainbox {
+    children: [listview];
+}
+
+listview {
+    columns: 2;
+    lines: 2;
+    gap: 0.2em;
+    flow: horizontal;
+    cycle: false;
+    scrollbar: false;
+}
+
+element {
+    padding: 0.9em;
+    border-radius: 16px;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    font-size: 18px;
+}
+
+element.selected {
+    background-color: @background-dim;
+}
